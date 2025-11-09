@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Internships - DecodedHarshita</title>
+  <link rel="icon" type="image/png" href="assets/logo.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+    <span id="theme-icon">🌙</span>
+  </div>
+
+  <header>
+    <div class="logo">DecodedHarshita</div>
+    <nav>
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="achievements.html" class="nav-btn">Achievements</a>
+      <a href="projects.html" class="nav-btn">Projects</a>
+      <a href="skills.html" class="nav-btn">Skills</a>
+      <a href="contact.html" class="nav-btn">Contact Me</a>
+      <a href="internship.html" class="nav-btn active">Internships</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="badge">💼 Internships</div>
+    <h1>My Internship Experience</h1>
+    <p>Learning by building, exploring, and experimenting with real-world tech.</p>
+  </section>
+
+  <section class="cards-section">
+
+    <!-- AIDS Full Stack Internship -->
+    <div class="horizontal-card">
+      <a href="assets/Screenshot_10-11-2025_01032_172.16.50.112.jpeg" target="_blank" class="img-box">
+        <img src="assets/Screenshot_10-11-2025_01032_172.16.50.112.jpeg" alt="Full Stack Internship Certificate" />
+      </a>
+      <div class="content">
+        <a href="assets/FullStack Certificate.pdf" target="_blank">
+          <div class="card-title">AIDS Full Stack Internship – IGDTUW</div>
+        </a>
+        <p class="card-desc">
+          Worked as a <strong>Full Stack Development Trainee</strong> (June 2025 – July 2025).  
+          Contributed to building <strong>NutriMate</strong>, a smart health platform that helps users plan diets 
+          based on food preferences, weight, and height using basic data science models for 
+          personalized nutritional insights.
+        </p>
+        <a class="view-link" href="assets/FullStack Certificate.pdf" target="_blank">🔗 View Certificate</a>
+      </div>
+    </div>
+
+    <!-- Workshop on Mobile Application Development -->
+    <div class="horizontal-card">
+      <a href="assets/Screenshot_10-11-2025_01125_.jpeg" target="_blank" class="img-box">
+        <img src="assets/Screenshot_10-11-2025_01125_.jpeg" alt="Mobile Workshop Certificate" />
+      </a>
+      <div class="content">
+        <a href="assets/MobileWorkshop.pdf" target="_blank">
+          <div class="card-title">Mobile Application Development Workshop – IGDTUW</div>
+        </a>
+        <p class="card-desc">
+          Hands-on mobile app development workshop where I learned UI screens, navigation flow, and app architecture.  
+          Built <strong>MediTrack</strong> — a medication reminder app that helps users track prescriptions and set routine alerts.
+        </p>
+        <a class="view-link" href="assets/MobileWorkshop.pdf" target="_blank">🔗 View Certificate</a>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    // Load saved theme on load
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        document.body.classList.add("light-theme");
+        document.getElementById("theme-icon").textContent = "☀️";
+      }
+    });
+
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById("theme-icon");
+      const isLight = body.classList.toggle("light-theme");
+      icon.textContent = isLight ? "☀️" : "🌙";
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+    }
+  </script>
+
+</body>
+</html>
